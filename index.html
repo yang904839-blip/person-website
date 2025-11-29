@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北京程序员 | Notion创作者</title>
+  <meta name="description" content="Frontend Engineer & Digital Creator focusing on Notion and AI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: 'rgb(var(--bg-background) / <alpha-value>)',
+            surface: 'rgb(var(--bg-surface) / <alpha-value>)',
+            surfaceHighlight: 'rgb(var(--bg-surface-highlight) / <alpha-value>)',
+            text: 'rgb(var(--text-main) / <alpha-value>)',
+            textMuted: 'rgb(var(--text-muted) / <alpha-value>)',
+            primary: 'rgb(var(--color-primary) / <alpha-value>)',
+            accent: 'rgb(var(--color-accent) / <alpha-value>)',
+            border: 'rgb(var(--color-border) / <alpha-value>)',
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      /* Light Mode Variables */
+      --bg-background: 255 255 255;
+      --bg-surface: 249 250 251;
+      /* gray-50 */
+      --bg-surface-highlight: 243 244 246;
+      /* gray-100 */
+      --text-main: 24 24 27;
+      /* gray-900 */
+      --text-muted: 82 82 91;
+      /* gray-600 */
+      --color-primary: 9 9 11;
+      /* gray-950 */
+      --color-accent: 37 99 235;
+      /* blue-600 */
+      --color-border: 228 228 231;
+      /* gray-200 */
+
+      /* Light Mode Pattern Colors */
+      --pattern-grid: rgba(0, 0, 0, 0.04);
+      --pattern-dot: rgba(0, 0, 0, 0.08);
+    }
+
+    .dark {
+      /* Dark Mode Variables */
+      --bg-background: 5 5 5;
+      --bg-surface: 10 10 10;
+      --bg-surface-highlight: 24 24 27;
+      --text-main: 228 228 231;
+      /* gray-200 */
+      --text-muted: 161 161 170;
+      /* gray-400 */
+      --color-primary: 250 250 250;
+      /* gray-50 */
+      --color-accent: 59 130 246;
+      /* blue-500 */
+      --color-border: 39 39 42;
+      /* gray-800 */
+
+      /* Dark Mode Pattern Colors */
+      --pattern-grid: rgba(255, 255, 255, 0.04);
+      --pattern-dot: rgba(255, 255, 255, 0.07);
+    }
+
+    body {
+      background-color: rgb(var(--bg-background));
+      color: rgb(var(--text-main));
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgb(var(--text-muted) / 0.2);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(var(--text-muted) / 0.4);
+    }
+
+    /* Dynamic Patterns */
+    .bg-grid {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    }
+
+    .dark .bg-grid {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    }
+
+    .bg-dot {
+      background-image: radial-gradient(var(--pattern-dot) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-panel {
+      background: rgb(var(--bg-surface) / 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgb(var(--color-border) / 0.5);
+    }
+
+    .glass-card {
+      background: linear-gradient(180deg, rgb(var(--bg-surfaceHighlight) / 0.4) 0%, rgb(var(--bg-surfaceHighlight) / 0.1) 100%);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgb(var(--color-border) / 0.5);
+    }
+
+    .glass-card:hover {
+      border-color: rgb(var(--color-accent) / 0.3);
+      box-shadow: 0 0 30px -5px rgb(var(--color-accent) / 0.15);
+    }
+  </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/person-website/assets/index-DihM29U0.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
