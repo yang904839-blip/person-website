@@ -10,13 +10,13 @@ export const NAV_ITEMS = [
   { label: '核心身份', href: '#identity' },
   { label: '思维体系', href: '#philosophy' },
   { label: '精选内容', href: '#content' },
-  { label: '变现产品', href: '#products' },
+  { label: '我的产品', href: '#products' },
   { label: '时间线', href: '#timeline' },
 ];
 
 export const HERO_DATA = {
   title: "Code by Day, Creator by Night.",
-  subtitle: "北京前端开发工程师 | Notion + AI 效率专家",
+  subtitle: "北京资深前端开发程序员 | Notion + AI 效率专家",
   description: "白天在互联网大厂写代码，晚上构建自动化变现系统。极度务实，拒绝虚荣指标，一切指向真实转化。",
   cta: "获取我的 Notion-PARA 人生管理系统"
 };
@@ -68,7 +68,12 @@ export const TIMELINE: Milestone[] = [
   {
     year: "Future",
     title: "自由创作者",
-    description: "目标月入 2W+，旅居杭州。形成「内容+产品+社群」闭环，实现时间与地点自由。",
+    description: "目标月入 10W+，旅居杭州。形成「内容+产品+社群」闭环，实现时间与地点自由。",
+  },
+  {
+    year: "碎碎念",
+    title: "碎碎念",
+    description: "这是一个在持续成长的频道，希望我们在自己的人生道路上都越来越精彩",
   }
 ];
 
