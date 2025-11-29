@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import Hero from './components/Hero';
 import Philosophy from './components/Philosophy';
+import FeaturedContent from './components/FeaturedContent';
 import Products from './components/Products';
 import Journey from './components/Journey';
 import Footer from './components/Footer';
@@ -50,8 +51,8 @@ const App: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tighter text-primary">
-            PC<span className="text-accent">.</span>
+          <div className="text-lg md:text-xl font-bold tracking-tighter text-primary whitespace-nowrap overflow-hidden text-ellipsis">
+            ThoughtCounts<span className="text-textMuted font-normal ml-1">-思维至上</span>
           </div>
 
           {/* Desktop Nav */}
@@ -114,6 +115,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Philosophy />
+        <FeaturedContent />
         <Products />
         <Journey />
       </main>
