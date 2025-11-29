@@ -17,7 +17,7 @@ export const NAV_ITEMS = [
 export const HERO_DATA = {
   title: "Code by Day, Creator by Night.",
   subtitle: "北京资深前端开发程序员 | Notion + AI 效率专家",
-  description: "白天在互联网大厂写代码，晚上构建自动化变现系统。极度务实，拒绝虚荣指标，一切指向真实转化。",
+  description: "白天在互联网大厂写代码，晚上构建自动化变现系统。极度务实，拒绝虚荣指标，一切指向真实转化。123",
   cta: "获取我的 Notion-PARA 人生管理系统"
 };
 
