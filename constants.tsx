@@ -1,8 +1,8 @@
-import { 
-  Brain, 
-  Target, 
-  Layers, 
-  Zap, 
+import {
+  Brain,
+  Target,
+  Layers,
+  Zap,
 } from 'lucide-react';
 import { Principle, Milestone, Project } from './types';
 
@@ -16,16 +16,16 @@ export const NAV_ITEMS = [
 
 export const HERO_DATA = {
   title: "Code by Day, Creator by Night.",
-  subtitle: "北漂前端工程师 | Notion + AI 效率专家",
+  subtitle: "北京前端开发工程师 | Notion + AI 效率专家",
   description: "白天在互联网大厂写代码，晚上构建自动化变现系统。极度务实，拒绝虚荣指标，一切指向真实转化。",
-  cta: "获取我的 Notion 系统"
+  cta: "获取我的 Notion-PARA 人生管理系统"
 };
 
 export const PRINCIPLES: Principle[] = [
   {
     title: "极度务实",
-    description: "拒绝点赞和粉丝数的虚荣指标，只看重真实转化。",
-    quote: "如果你没有赚钱，那么你做的事情就是不对的。",
+    description: "任何事情都要积极的行动起来 把主动权牢牢的掌握到自己手里面",
+    quote: "你的人生需要你完全做主 需要你完全负责",
     icon: Target
   },
   {
