@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Play, ArrowRight, ExternalLink } from 'lucide-react';
 import { VIDEOS } from '../constants';
 
@@ -33,24 +33,24 @@ const FeaturedContent: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {VIDEOS.map((video, idx) => (
-            <div key={idx} className="group glass-card flex flex-col rounded-2xl overflow-hidden bg-surfaceHighlight/30 dark:bg-surfaceHighlight/10 hover:-translate-y-2 transition-transform duration-500 shadow-lg border border-border/50">
-              {/* Thumbnail Container - Links to YouTube */}
+            <div key={idx} className="group glass-card flex flex-col rounded-2xl overflow-hidden bg-surfaceHighlight/30 dark:bg-surfaceHighlight/10 transition-transform duration-500 shadow-lg border border-border/50 hover:-translate-y-2">
+              {/* Video Thumbnail Link */}
               <a 
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="aspect-video w-full bg-black relative block overflow-hidden"
+                className="aspect-video w-full bg-black relative block overflow-hidden group/image"
+                aria-label={`Watch ${video.title} on YouTube`}
               >
-                {/* Fallback image placeholder in case maxres doesn't exist, though usually it does for creators */}
+                {/* Fallback image placeholder */}
                 <div className="absolute inset-0 bg-surfaceHighlight animate-pulse" />
                 
                 <img 
                   src={`https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105 opacity-90 group-hover/image:opacity-100"
                   onError={(e) => {
-                    // Fallback to hqdefault if maxres fails
                     const target = e.target as HTMLImageElement;
                     if (target.src.includes('maxresdefault')) {
                         target.src = `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`;
@@ -59,15 +59,15 @@ const FeaturedContent: React.FC = () => {
                 />
                 
                 {/* Overlay & Play Button */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <div className="absolute inset-0 bg-black/20 group-hover/image:bg-black/40 transition-colors flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover/image:scale-110 transition-transform duration-300 shadow-xl">
                     <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
                   </div>
                 </div>
 
-                {/* Duration Badge (Optional Mockup) */}
+                {/* Duration Badge (Mockup) */}
                 <div className="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
-                   WATCH
+                   WATCH ON YOUTUBE
                 </div>
               </a>
               
@@ -78,9 +78,9 @@ const FeaturedContent: React.FC = () => {
                    #{idx + 1} Most Viewed
                 </div>
 
-                <h3 className="text-lg font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors leading-snug">
+                <h3 className="text-lg font-bold text-primary mb-3 line-clamp-2 leading-snug group-hover:text-accent transition-colors">
                   <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">
-                    {video.title}
+                   {video.title}
                   </a>
                 </h3>
                 <p className="text-textMuted text-sm line-clamp-3 leading-relaxed opacity-80 mb-4 flex-1">
@@ -93,7 +93,7 @@ const FeaturedContent: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-xs font-bold text-accent hover:underline mt-auto"
                 >
-                  WATCH VIDEO <ArrowRight className="w-3 h-3 ml-1" />
+                  在 YouTube 上观看 <ArrowRight className="w-3 h-3 ml-1" />
                 </a>
               </div>
             </div>
