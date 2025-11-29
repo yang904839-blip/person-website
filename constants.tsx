@@ -3,14 +3,13 @@ import {
   Target, 
   Layers, 
   Zap, 
-  Code, 
-  Smartphone 
 } from 'lucide-react';
 import { Principle, Milestone, Project } from './types';
 
 export const NAV_ITEMS = [
   { label: '核心身份', href: '#identity' },
   { label: '思维体系', href: '#philosophy' },
+  { label: '精选内容', href: '#content' },
   { label: '变现产品', href: '#products' },
   { label: '时间线', href: '#timeline' },
 ];
@@ -94,5 +93,23 @@ export const PRODUCTS: Project[] = [
     description: "从初级到高级的硬核技术路径与软技能复盘。",
     price: "Free",
     tags: ["Career", "Frontend"]
+  }
+];
+
+export const VIDEOS = [
+  {
+    id: "2kw-T-aoh7Q",
+    title: "目標總是完不成？你缺的不是毅力，而是這個Notion高效執行系統！（內含PARA法介紹）",
+    description: "深度解析 PARA 方法论，将混乱的人生整理得井井有条。这是我播放量最高的 Notion 系统实操视频，帮你解决执行力问题。"
+  },
+  {
+    id: "XL8d6L85MSY",
+    title: "Notion教程 ｜ 2025年notion快速入門指南，到底怎麽使用notion？｜ 附我的notion GTD系統免費模版",
+    description: "2025年最新入门指南。从零开始掌握核心功能，附赠我个人使用的 GTD 系统模版，帮你快速上手，建立自己的效率系统。"
+  },
+  {
+    id: "Xg8KzX7jTqs",
+    title: "可能是全網最好的Notion基礎教程｜全程無廢話，無私貨，純幹貨｜10分鐘完全掌握Notion基礎用法",
+    description: "全程无废话、无私货的纯干货基础教程。十分钟带你完全掌握 Notion 基础用法，享受纯净的学习体验。"
   }
 ];

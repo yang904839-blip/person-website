@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             </a>
 
             {/* Email */}
-            <a href="mailto:hello@example.com" className="p-2 bg-surface rounded-full text-textMuted hover:text-primary hover:bg-surfaceHighlight transition-all border border-transparent hover:border-border" aria-label="Email">
+            <a href="mailto:ykf904839@gmail.com" className="p-2 bg-surface rounded-full text-textMuted hover:text-primary hover:bg-surfaceHighlight transition-all border border-transparent hover:border-border" aria-label="Email">
               <Mail className="w-5 h-5" />
             </a>
         </div>
