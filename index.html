@@ -27,9 +27,13 @@
           },
           backgroundImage: {
             'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          },
+          animation: {
+            'spin-slow': 'spin-slow 4s linear infinite',
           }
         }
       }
+    }
     }
   </script>
   <style>
@@ -89,28 +93,6 @@
       width: 8px;
     }
 
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: rgb(var(--text-muted) / 0.2);
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgb(var(--text-muted) / 0.4);
-    }
-
-    /* Dynamic Patterns */
-    .bg-grid {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-    }
-
-    .dark .bg-grid {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-    }
-
     .bg-dot {
       background-image: radial-gradient(var(--pattern-dot) 1px, transparent 1px);
       background-size: 24px 24px;
@@ -132,6 +114,21 @@
     .glass-card:hover {
       border-color: rgb(var(--color-accent) / 0.3);
       box-shadow: 0 0 30px -5px rgb(var(--color-accent) / 0.15);
+    }
+
+    /* Animations */
+    @keyframes spin-slow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-spin-slow {
+      animation: spin-slow 4s linear infinite;
     }
   </style>
   <script type="importmap">

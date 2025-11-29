@@ -72,7 +72,7 @@ export const TIMELINE: Milestone[] = [
   }
 ];
 
-export const PRODUCTS: Project[] = [
+export const DIGITAL_PRODUCTS: Project[] = [
   {
     title: "LifeOS 个人管理系统",
     category: "Notion Template",
@@ -93,6 +93,30 @@ export const PRODUCTS: Project[] = [
     description: "从初级到高级的硬核技术路径与软技能复盘。",
     price: "Free",
     tags: ["Career", "Frontend"]
+  }
+];
+
+export const SOFTWARE_PRODUCTS: Project[] = [
+  {
+    title: "AI-tabGroup",
+    category: "Browser Ext",
+    description: "AI 驱动的浏览器标签页自动分类工具。一键整理杂乱标签，还你清爽工作台。",
+    price: "Free",
+    tags: ["AI", "Efficiency", "Chrome"]
+  },
+  {
+    title: "QuickView",
+    category: "Productivity Tool",
+    description: "无需打开新标签页，悬停或快捷键直接弹窗预览链接内容，极致的浏览体验。",
+    price: "Free",
+    tags: ["Preview", "Speed", "Browser"]
+  },
+  {
+    title: "专注聚光灯",
+    category: "macOS App",
+    description: "沉浸式工作神器。高亮当前活动窗口并压暗背景，让注意力强制聚焦于手头工作。",
+    price: "$4.99",
+    tags: ["macOS", "Focus", "Utility"]
   }
 ];
 
