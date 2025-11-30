@@ -64,9 +64,14 @@ const Products: React.FC = () => {
                     ))}
                   </div>
 
-                  <button className="w-full py-3 rounded-lg border border-border bg-surfaceHighlight/50 text-text hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all text-sm font-medium">
+                  <a
+                    href={project.link || "#"}
+                    target={project.link ? "_blank" : "_self"}
+                    rel={project.link ? "noopener noreferrer" : ""}
+                    className="w-full py-3 rounded-lg border border-border bg-surfaceHighlight/50 text-text hover:bg-accent hover:text-white hover:border-accent hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all text-sm font-medium flex items-center justify-center"
+                  >
                     查看详情
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

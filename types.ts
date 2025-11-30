@@ -21,6 +21,7 @@ export interface Project {
   price?: string;
   tags: string[];
   image?: string;
+  link?: string;
 }
 
 export interface NavItem {

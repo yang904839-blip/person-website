@@ -84,7 +84,8 @@ export const PRODUCTS: Project[] = [
     category: "Notion Template",
     description: "基于 PARA 方法论的终极人生管理后台，整合任务、知识与目标。",
     price: "¥ 39.9",
-    tags: ["Notion", "Efficiency", "PARA"]
+    tags: ["Notion", "Efficiency", "PARA"],
+    link: "https://yang904839-blip.github.io/Para-Template-Intro/"
   },
   {
     title: "自媒体内容流水线",

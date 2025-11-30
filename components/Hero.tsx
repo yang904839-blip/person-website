@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
-              href="https://liberating-actor-38b.notion.site/PARA-d7e00d447b6847fbb89afff0736eefcf?source=copy_link"
+              href="https://yang904839-blip.github.io/Para-Template-Intro/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-primary text-background font-bold rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-accent/10"
