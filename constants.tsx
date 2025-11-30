@@ -5,6 +5,7 @@ import {
   Zap,
 } from 'lucide-react';
 import { Principle, Milestone, Project } from './types';
+import aiTabGroupPreview from './assets/ai-tab-group-preview.png';
 
 export const NAV_ITEMS = [
   { label: '核心身份', href: '#identity' },
@@ -98,6 +99,28 @@ export const PRODUCTS: Project[] = [
     description: "从初级到高级的硬核技术路径与软技能复盘。",
     price: "Free",
     tags: ["Career", "Frontend"]
+  }
+];
+
+export const SOFTWARE_PROJECTS: Project[] = [
+  {
+    title: "AI-tabGroup",
+    category: "Browser Extension",
+    description: "AI自动分类浏览器标签页，智能整理你的工作区。",
+    tags: ["AI", "Productivity", "Browser"],
+    image: aiTabGroupPreview
+  },
+  {
+    title: "QuickView",
+    category: "Browser Extension",
+    description: "当前浏览器页面直接弹窗预览页面链接内容，提升浏览效率。",
+    tags: ["Efficiency", "Preview", "Tool"]
+  },
+  {
+    title: "专注聚光灯",
+    category: "macOS App",
+    description: "高亮当前的窗口，让注意力更集中，减少干扰。",
+    tags: ["macOS", "Focus", "Utility"]
   }
 ];
 

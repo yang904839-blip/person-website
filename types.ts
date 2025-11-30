@@ -20,6 +20,7 @@ export interface Project {
   description: string;
   price?: string;
   tags: string[];
+  image?: string;
 }
 
 export interface NavItem {
