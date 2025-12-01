@@ -34,6 +34,7 @@ const App: React.FC = () => {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      console.log('Theme set to light');
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
