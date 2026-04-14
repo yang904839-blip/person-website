@@ -69,7 +69,7 @@ export const TIMELINE: Milestone[] = [
   {
     year: "Future",
     title: "自由创作者",
-    description: "目标月入 10W+，旅居杭州。形成「内容+产品+社群」闭环，实现时间与地点自由。",
+    description: "目标月入 10W+，做数字游民。形成「内容+产品+社群」闭环，实现时间与地点自由。",
   },
   {
     year: "碎碎念",
@@ -78,6 +78,9 @@ export const TIMELINE: Milestone[] = [
   }
 ];
 
+import lifeosPreview from './assets/lifeos-preview.png';
+import contentWorkflowPreview from './assets/content-workflow-preview.png';
+
 export const PRODUCTS: Project[] = [
   {
     title: "LifeOS 个人管理系统",
@@ -85,31 +88,48 @@ export const PRODUCTS: Project[] = [
     description: "基于 PARA 方法论的终极人生管理后台，整合任务、知识与目标。",
     price: "¥ 39.9",
     tags: ["Notion", "Efficiency", "PARA"],
-    link: "https://yang904839-blip.github.io/Para-Template-Intro/"
+    link: "https://yang904839-blip.github.io/Para-Template-Intro/",
+    image: lifeosPreview
   },
   {
     title: "自媒体内容流水线",
     category: "Workflow",
-    description: "从灵感到发布的标准化 SOP，专为兼职创作者设计。",
+    description: "从灵感到发布的标准化 SOP,专为兼职创作者设计。",
     price: "¥ 19.9",
-    tags: ["SOP", "Content", "AI"]
-  },
-  {
-    title: "前端工程师晋升指南",
-    category: "Guide",
-    description: "从初级到高级的硬核技术路径与软技能复盘。",
-    price: "Free",
-    tags: ["Career", "Frontend"]
+    tags: ["SOP", "Content", "AI"],
+    image: contentWorkflowPreview,
+    selfMediaImages: [
+      "/assets/self-media/board.png",
+      "/assets/self-media/calendar.png",
+      "/assets/self-media/gallary.png",
+      "/assets/self-media/table.png",
+      "/assets/self-media/timeline.png"
+    ]
   }
 ];
 
 export const SOFTWARE_PROJECTS: Project[] = [
   {
-    title: "AI-tabGroup",
+    title: "AI Tab Classifier",
     category: "Browser Extension",
-    description: "AI自动分类浏览器标签页，智能整理你的工作区。",
+    description: "智能的 Chrome 浏览器标签页管理扩展，利用人工智能技术自动分析和整理您的浏览器标签页。通过先进的 AI 分类算法，它能够将杂乱无章的标签页按照主题、领域或网站域名自动分组，让您的浏览器工作区保持整洁有序。",
     tags: ["AI", "Productivity", "Browser"],
-    image: aiTabGroupPreview
+    image: "/assets/ai-tab-class/1.png",
+    softwareImages: [
+      "/assets/ai-tab-class/1.png",
+      "/assets/ai-tab-class/2.png",
+      "/assets/ai-tab-class/3.png",
+      "/assets/ai-tab-class/4.png",
+      "/assets/ai-tab-class/6.png"
+    ],
+    features: [
+      { icon: "🎯", text: "智能分类：使用 AI 理解标签页内容" },
+      { icon: "⚡", text: "一键整理：点击即可完成智能分类" },
+      { icon: "🌍", text: "多语言支持：支持 9 种语言界面" },
+      { icon: "🔒", text: "隐私优先：数据本地存储，密钥加密" },
+      { icon: "🎨", text: "彩色分组：自动分配醒目的颜色" },
+      { icon: "🤖", text: "多 AI 提供商：支持多种 AI 模型" }
+    ]
   },
   {
     title: "QuickView",

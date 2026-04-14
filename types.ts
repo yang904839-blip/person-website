@@ -22,6 +22,9 @@ export interface Project {
   tags: string[];
   image?: string;
   link?: string;
+  selfMediaImages?: string[];
+  softwareImages?: string[];
+  features?: { icon: string; text: string }[];
 }
 
 export interface NavItem {

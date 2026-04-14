@@ -2,8 +2,19 @@
 import React, { useState } from 'react';
 import { Play, ArrowRight, ExternalLink } from 'lucide-react';
 import { VIDEOS } from '../constants';
+import YouTubePlayerModal from './YouTubePlayerModal';
 
 const FeaturedContent: React.FC = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedVideoId, setSelectedVideoId] = useState('');
+  const [selectedVideoTitle, setSelectedVideoTitle] = useState('');
+
+  const handleVideoClick = (videoId: string, title: string) => {
+    setSelectedVideoId(videoId);
+    setSelectedVideoTitle(title);
+    setModalOpen(true);
+  };
+
   return (
     <section id="content" className="py-32 bg-background relative border-t border-border transition-colors duration-300">
       {/* Subtle background glow */}
@@ -34,12 +45,10 @@ const FeaturedContent: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {VIDEOS.map((video, idx) => (
             <div key={idx} className="group glass-card flex flex-col rounded-2xl overflow-hidden bg-surfaceHighlight/30 dark:bg-surfaceHighlight/10 hover:-translate-y-2 transition-transform duration-500 shadow-lg border border-border/50">
-              {/* Thumbnail Container - Links to YouTube */}
-              <a
-                href={`https://www.youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="aspect-video w-full bg-black relative block overflow-hidden"
+              {/* Thumbnail Container - Now opens modal */}
+              <button
+                onClick={() => handleVideoClick(video.id, video.title)}
+                className="aspect-video w-full bg-black relative block overflow-hidden cursor-pointer"
               >
                 {/* Fallback image placeholder in case maxres doesn't exist, though usually it does for creators */}
                 <div className="absolute inset-0 bg-surfaceHighlight animate-pulse" />
@@ -69,7 +78,7 @@ const FeaturedContent: React.FC = () => {
                 <div className="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
                   WATCH
                 </div>
-              </a>
+              </button>
 
               {/* Text Content */}
               <div className="p-6 relative flex flex-col flex-1">
@@ -79,22 +88,23 @@ const FeaturedContent: React.FC = () => {
                 </div> */}
 
                 <h3 className="text-lg font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors leading-snug">
-                  <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">
+                  <button
+                    onClick={() => handleVideoClick(video.id, video.title)}
+                    className="text-left hover:underline"
+                  >
                     {video.title}
-                  </a>
+                  </button>
                 </h3>
                 <p className="text-textMuted text-sm line-clamp-3 leading-relaxed opacity-80 mb-4 flex-1">
                   {video.description}
                 </p>
 
-                <a
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => handleVideoClick(video.id, video.title)}
                   className="inline-flex items-center text-xs font-bold text-accent hover:underline mt-auto"
                 >
                   WATCH VIDEO <ArrowRight className="w-3 h-3 ml-1" />
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -112,6 +122,14 @@ const FeaturedContent: React.FC = () => {
           </a>
         </div>
       </div>
+
+      {/* YouTube Player Modal */}
+      <YouTubePlayerModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        videoId={selectedVideoId}
+        title={selectedVideoTitle}
+      />
     </section>
   );
 };
